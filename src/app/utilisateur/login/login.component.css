@@ -1,0 +1,148 @@
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+#menu2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0%;
+  background-color: rgba(0, 0, 0, 0.445);
+  width: 100%;
+}
+
+.select2 .fonction {
+  display: block;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+.fonction:hover {
+  background-color:#ffffff;
+}
+.select2 {
+  float: right;
+}
+
+#enre {
+  padding-right: 70px;
+  padding-left: 20px ;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+
+}
+
+.container {
+  position: relative;
+  text-align: center;
+
+}
+
+#contenu{
+  position: absolute ;
+  left: 35%;
+  top: 5%;
+  padding-left: 130px;
+  margin-right: 32.5%;
+  padding: 60px;
+  background-color: rgba(255, 255, 255, 0.836);
+}
+#catalogue{
+  width: 100%;
+  background-size: cover;
+  }
+#titre{
+  margin-left: 7.5%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  padding: 10px;
+  margin-bottom: 50px;
+  color: black;
+}
+
+.example-container{
+  padding-bottom: 15px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.finlien{
+  color: white;
+  word-spacing: 2px ;
+}
+
+#fin{
+  color: lightgray;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  padding-left: 15%;
+  background-size: cover;
+  overflow: hidden;
+  background-color: #111111e7;
+  word-spacing: 2px;
+  position: fixed ;
+  background-attachment: fixed;
+  bottom: 0%;
+  max-width:100%;
+  width: 100%;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Aura Games</title>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <ul id="menu2">
+        <li class="select2"><a class="fonction" routerLink="">IT</a></li>
+        <li class="select2"><a class="fonction" routerLink="">DE |</a></li>
+        <li class="select2"><a class="fonction" routerLink="">FR |</a></li>
+        <li class="select2"><a class="fonction" id="enre" routerLink="/login">S'enregistrer</a></li>
+        <li class="select2"><a class="fonction" routerLink="/creer">Créer un Compte</a></li>
+      </ul>
+    </div>
+    <div class="date">
+      <div class="titre">Créer un compte</div>
+      <form class="example-form" >
+        <mat-form-field class="example-full-width">
+          <mat-label style="color: black;">Nom</mat-label>
+          <input matInput placeholder="Ex. smith"  style="color: black;">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label style="color: black;">Prénom</mat-label>
+          <input matInput placeholder="Ex. John"  style="color: black;">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label style="color: black;">Date de naissance</mat-label>
+          <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="example-full-width">
+          <mat-label style="color: black;">Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com"
+          [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label style="color: black;">Mot de passe</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <div class="validation">
+          <button type="submit" class="button"  style="vertical-align:middle"><span>Validez</span></button>
+        </div>
+      </form>
+    </div>
+    <div>
+      <a><img id="catalogue" src="games.jpg" alt="image de catalogue"></a>
+    </div>
+  </div>
+  <div id="fin">
+    Copyright &copy; AURA Games | <a class="finlien" href="">A propos de nous</a> | Création du site de vente de heux en ligne | Projet transversal I | <a class="finlien" href="">Online shop</a>
+  </div>
+</body>
+</html>

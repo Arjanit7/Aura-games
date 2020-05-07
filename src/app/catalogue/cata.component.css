@@ -1,0 +1,54 @@
+
+
+#menu2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0%;
+  background-color: rgba(0, 0, 0, 0.445);
+  width: 100%;
+}
+
+.select2 .fonction {
+  display: block;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+.fonction:hover {
+  background-color:#ffffff;
+}
+.select2 {
+  float: right;
+}
+
+
+.card {
+  float: left;
+  width: 25%;
+  height: 600px;
+  padding: 20px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 60px;
+  size: 500px  800px;
+  background-color: white;
+}
+.card:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: lightsteelblue;
+  cursor: pointer;
+}
+.contenu{
+  background: url("games.jpg");
+  background-size: 1400px 500px;
+  background-repeat: repeat-y;
+  height: 1500px;
+}
+
+
+
+

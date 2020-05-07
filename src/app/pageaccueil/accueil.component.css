@@ -1,106 +1,64 @@
-#logo
-{
 
-width: 20%;
+#menu2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0%;
+  background-color: rgba(0, 0, 0, 0.445);
+  width: 100%;
 }
+
+.select2 .fonction {
+  display: block;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+.fonction:hover {
+  background-color:#ffffff;
+}
+.select2 {
+  float: right;
+}
+
+#enre {
+  padding-right: 70px;
+  padding-left: 20px ;
+}
+
 #catalogue{
 background-image: url(games.jpg);
 width: 100%;
 background-size: cover;
 }
 
-#entete {
-  position: relative;
-  color: black;
-  background-color: rgb(4, 50gn, blue);
-
+#catalogue{
+  margin-bottom: -10px;
 }
 
-#txtlogo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#rechercherjeu{
-  text-align: right;
-  margin-right: 20px;
-  margin-top: 12px;
-}
-.cherche{
-border: 1px solid rgb(4,50,79) ;
-padding: 5px;
-}
-
-@font-face {
-  font-family: myFirstFont;
-  src: url(style/BungeeShade-Regular.ttf);
-}
-
-#titre
-{
-  font-family: myFirstFont;
-  font-size: 50px;
-  text-align: center;
-
-}
-@font-face {
-  font-family: fontdeux;
-  src: url(style/Monofett-Regular.ttf);
-}
-
-#soustitre
-{
-  font-family: fontdeux;
-  font-size: 30px;
-  text-align: center;
-  color: rgb(155, 0, 0);
-}
-#barmenu
-{
-  margin-top: -5px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-}
-#menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(155, 0, 0);
-}
 .finlien{
   color: white;
   word-spacing: 2px ;
 }
-.select {
-  float: left;
-}
 
-.select .fonction {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-}
-
-.fonction:hover {
-  background-color: #111111;
-}
 #fin{
   color: lightgray;
   list-style-type: none;
   margin: 0;
   padding: 10px;
+  padding-left: 15%;
+  background-size: cover;
   overflow: hidden;
   background-color: #111111e7;
-  text-align: center;
   word-spacing: 2px;
   position: fixed ;
+  background-attachment: fixed;
   bottom: 0%;
-  width: initial;
-  background-size: cover;
+  max-width:100%;
+  width: 100%;
 }
 
 .container {

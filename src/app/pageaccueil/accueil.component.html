@@ -8,47 +8,20 @@
 
 <body>
   <div id="letout">
-    <div>
-      <div id="entete">
-        <a class="titre" href="accueil.component.html"><img id="logo" src="lelogo.png" alt="logo"></a>
-        <div id="txtlogo">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1 id="titre">Aura GAMES</h1>
-          <h2 id="soustitre">Jeux vidéo</h2>
-        </div>
-      </div>
-      <div id="barmenu">
-        <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li class="select"><a class="fonction" href="accueil.component.html">Page d'accueil</a></li>
-          <li class="select"><a class="fonction" href="">Catalogue</a></li> <!--A changer faire-->
-          <li class="select"><a class="fonction" href="">A Page</a></li>
-          <li class="select"><a class="fonction" href="">Another Page</a></li>
-          <li class="select"><a class="fonction" href="">Information</a></li>
-          <li id="rechercherjeu">
-            <form method="post" action="#" id="recherche">
-             <p>
-              <input class="cherche" type="text" name="search_field" value="Chercher" />
-             </p>
-            </form>
-          </li>
+
+    <div class="container">
+      <div>
+        <ul id="menu2">
+          <li class="select2"><a class="fonction" routerLink="">IT</a></li>
+          <li class="select2"><a class="fonction" routerLink="">DE |</a></li>
+          <li class="select2"><a class="fonction" routerLink="">FR |</a></li>
+          <li class="select2"><a class="fonction" id="enre" routerLink="/login">S'enregistrer</a></li>
+          <li class="select2"><a class="fonction" routerLink="/creer">Créer un Compte</a></li>
         </ul>
       </div>
+      <a><img id="catalogue" src="games.jpg" alt="image de catalogue"></a>
+      <div class="txtcata"><a id="liencata" routerLink="/catalogue">Catalogue des jeux</a></div>
     </div>
-    <div class="container">
-      <a class="titre" href=""><img id="catalogue" src="games.jpg" alt="image de catalogue"></a>
-      <div class="txtcata"><a id="liencata" href="">Catalogue des jeux</a></div>
-    </div>
-    <div id="corpsite">
-      <div class="corp">
-        <!-- insert your sidebar items here -->
-        <h3>Latest News</h3>
-        <h4>New Website Launched</h4>
-        <h5>January 1st, 2010</h5>
-        <p>2010 sees the redesign of our website. Take a look around and let us know what you think.</p>
-      </div>
-    </div>
-    <div id="content_footer"></div>
     <div id="fin">
       Copyright &copy; AURA Games | <a class="finlien" href="">A propos de nous</a> | Création du site de vente de heux en ligne | Projet transversal I | <a class="finlien" href="">Online shop</a>
     </div>

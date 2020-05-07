@@ -1,0 +1,133 @@
+
+#menu2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0%;
+  background-color: rgba(0, 0, 0, 0.445);
+  width: 100%;
+}
+
+.select2 .fonction {
+  display: block;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+.fonction:hover {
+  background-color:#ffffff;
+}
+.select2 {
+  float: right;
+}
+
+#enre {
+  padding-right: 70px;
+  padding-left: 20px ;
+}
+
+#catalogue{
+width: 100%;
+background-size: cover;
+}
+
+.finlien{
+  color: white;
+  word-spacing: 2px ;
+}
+
+#catalogue{
+  margin-bottom: -10px;
+}
+
+#fin{
+  color: lightgray;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  padding-left: 15%;
+  background-size: cover;
+  overflow: hidden;
+  background-color: #111111e7;
+  word-spacing: 2px;
+  position: fixed ;
+  background-attachment: fixed;
+  bottom: 0%;
+  max-width:100%;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+.date{
+  position: absolute ;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.808);
+  width: 27%;
+  text-align: left;
+  padding: 20px;
+  font-size: 15px;
+}
+.titre{
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.example-full-width{
+  padding: 10px;
+  margin-left: 20px;
+  color: black;
+}
+
+.validation{
+  text-align: center;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 40%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button  {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

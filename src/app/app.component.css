@@ -1,0 +1,84 @@
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+#logo
+{
+width: 20%;
+}
+#entete {
+  position: relative;
+  color: black;
+  background: url(cover1.jpg);
+  background-size: 100% 123px;
+  background-repeat: no-repeat;
+}
+
+#txtlogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#rechercherjeu{
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 12px;
+}
+.cherche{
+border: 1px solid rgb(4,50,79) ;
+padding: 5px;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(style/BungeeShade-Regular.ttf);
+}
+
+#titre
+{
+  font-family: myFirstFont;
+  font-size: 50px;
+  text-align: center;
+
+}
+@font-face {
+  font-family: fontdeux;
+  src: url(style/PressStart2P-Regular.ttf);
+}
+
+#soustitre
+{
+  font-family: fontdeux;
+  font-size: 30px;
+  text-align: center;
+}
+#barmenu
+{
+  margin-top: -5px;
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+}
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(155, 0, 0);
+}
+.select .fonction {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.fonction:hover {
+  background-color: #111111;
+}
+.select {
+  float: left;
+}
+
+
+
+

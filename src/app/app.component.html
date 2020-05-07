@@ -4,8 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="app.component.css" title="style" />
 </head>
+
 <body>
-<app-accueil></app-accueil>
+  <div>
+    <div id="entete">
+      <a class="titre" routerLink=""><img id="logo" src="assets\image/lelogo.png" alt="logo"></a>
+      <div id="txtlogo">
+        <!-- class="logo_colour", allows you to change the colour of the text -->
+        <h1 id="titre">Aura GAMES</h1>
+        <h2 id="soustitre">Jeux vidéo</h2>
+      </div>
+    </div>
+
+    <div id="barmenu">
+      <ul id="menu">
+        <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+        <li class="select"><a class="fonction" routerLink="">Page d'accueil</a></li>
+        <li class="select"><a class="fonction" routerLink="/catalogue">Catalogue</a></li> <!--A changer faire-->
+        <li class="select"><a class="fonction" href="">A Page</a></li>
+        <li class="select"><a class="fonction" href="">Another Page</a></li>
+        <li class="select"><a class="fonction" href="">Information</a></li>
+        <li id="rechercherjeu">
+          <form method="post" action="#" id="recherche">
+           <p>
+            <input class="cherche" type="text" name="search_field" value="Chercher" />
+           </p>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
 </body>
 </html>

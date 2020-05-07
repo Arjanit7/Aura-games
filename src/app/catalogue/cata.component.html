@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body class="contenu">
+  <div>
+    <ul id="menu2">
+      <li class="select2"><a class="fonction" routerLink="">IT</a></li>
+      <li class="select2"><a class="fonction" routerLink="">DE |</a></li>
+      <li class="select2"><a class="fonction" routerLink="">FR |</a></li>
+      <li class="select2"><a class="fonction" id="enre" routerLink="/login">S'enregistrer</a></li>
+      <li class="select2"><a class="fonction" routerLink="/creer">Créer un Compte</a></li>
+    </ul>
+  </div>
+  <div *ngFor='let jeu of catalogue, let j= index'>
+    <div *ngFor='let image of images, let i = index'>
+      <div *ngIf="j==i">
+        <div class="card">
+          <img class="imgjeu" src={{image}} alt="img_jeu" style="width: 300px ; height: 400px;" >
+          <div>
+            <h1> {{jeu.nom_jeu}}</h1>
+            <p class="prix">{{jeu.prix}}.-</p>
+            <p>{{jeu.description}}</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<!--
+  <div class="card">
+  <img class="imgjeu" src="" alt="FIFA20" style="width: 75%;" >
+  <h1>Tailored Jeans</h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans..</p>
+  <p><button>Add to Cart</button></p>
+</div>
+  <div class="card">
+  <img class="imgjeu" src="" alt="GARR'S MODE" style="width: 75%;" >
+  <h1>Tailored Jeans</h1>
+  <p class="price">$16.99</p>
+  <p>Some text about the jeans..</p>
+  <p><button>Add to Cart</button></p>
+</div>
+<div class="card">
+  <img class="imgjeu" src="assets\image/lnsq4dwbzng31.jpg" alt="GTA5" style="width: 75%;" >
+  <h1>Tailored Jeans</h1>
+  <p class="price">$15.99</p>
+  <p>Some text about the jeans..</p>
+  <p><button>Add to Cart</button></p>
+</div>
+<div class="card">
+  <img class="imgjeu" src="assets\image/unnamed.jpg" alt="GTA5" style="width: 75%;" >
+  <h1>Tailored Jeans</h1>
+  <p class="price">$11.99</p>
+  <p>Some text about the jeans..</p>
+  <p><button>Add to Cart</button></p>
+</div>
+<div class="card">
+  <img class="imgjeu" src="assets\image/x-160799.jpg" alt="GTA5"style="width: 75%;" >
+  <h1>Tailored Jeans</h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans..</p>
+  <p><button>Add to Cart</button></p>
+</div> -->
+</body>
+</html>
