@@ -18,7 +18,7 @@
     </div>
     <div class="date">
       <div class="titre">Créer un compte</div>
-      <form class="example-form" >
+      <form class="example-form" (submit)="loginuser($event)">
         <mat-form-field class="example-full-width">
           <mat-label style="color: black;">Nom</mat-label>
           <input matInput placeholder="Ex. smith"  style="color: black;">

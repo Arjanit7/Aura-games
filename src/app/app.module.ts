@@ -23,7 +23,6 @@ import{catacomponent} from './catalogue/cata.component'
 import {CatalogueService} from './catalogue/catalogue.service';
 import {LoginComponent} from './utilisateur/login/login.component';
 import {creercomptecomponent} from './creercompte/creercompte.component';
-import { CreercomptsComponent } from './creercompts/creercompts.component';
 import { AdminComponent } from './admin/admin.component';
 import { LogoutComponent } from './utilisateur/logout/logout.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
@@ -37,10 +36,9 @@ import { ToastrModule } from 'ngx-toastr';
     catacomponent,
     LoginComponent,
     creercomptecomponent,
-    CreercomptsComponent,
     AdminComponent,
     LogoutComponent,
-    UtilisateurComponent
+    UtilisateurComponent,
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,9 @@ export class creercomptecomponent implements OnInit {
     this.maxDate = new Date(currentYear - 18, 0, 1);
   }
 
+  loginuser(event){
+    alert("Votre compte a été créer avec succès");
+  }
   getErrorMessage() {
     if (this.email.hasError('required')) {
       return 'You must enter a value';

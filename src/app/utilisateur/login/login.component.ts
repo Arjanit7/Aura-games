@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     const email = target.querySelector('#email').value
     const mdp = target.querySelector('#mdp').value
     this.Auth.getUserDetails(email,mdp)
-console.log(email,mdp)
+ alert("Vous êtes connecté");
   }
 
 }
