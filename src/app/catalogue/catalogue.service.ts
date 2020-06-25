@@ -13,8 +13,5 @@ apicataUrl="http://localhost:3000/jeu";
 
   getJeu() {
     return this.http.get<Catalogue[]>(this.apicataUrl);
-
   }
-
-
 }

@@ -18,30 +18,31 @@
     </div>
     <div class="date">
       <div class="titre">Créer un compte</div>
-      <form class="example-form" (submit)="loginuser($event)">
+      <form #monform="ngForm" class="example-form" (ngSubmit)="loginuser()">
+
         <mat-form-field class="example-full-width">
           <mat-label style="color: black;">Nom</mat-label>
-          <input matInput placeholder="Ex. smith"  style="color: black;">
+          <input name="nom" matInput placeholder="Ex. smith"  style="color: black;"  [(ngModel)]="comptemodel.nom">
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label style="color: black;">Prénom</mat-label>
-          <input matInput placeholder="Ex. John"  style="color: black;">
+          <input name="prenom" matInput placeholder="Ex. John"  style="color: black;" [(ngModel)]="comptemodel.prenom">
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label style="color: black;">Date de naissance</mat-label>
-          <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
+          <input name="date_de_naissance" matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" [(ngModel)]="comptemodel.date_de_naissance ">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
         <mat-form-field appearance="fill" class="example-full-width">
           <mat-label style="color: black;">Enter your email</mat-label>
-          <input matInput placeholder="pat@example.com"
-          [formControl]="email" required>
+          <input name="email" [(ngModel)]="comptemodel.email" matInput placeholder="pat@example.com"
+           required>
           <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label style="color: black;">Mot de passe</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
+          <input  name="mdp" matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="comptemodel.mdp">
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>

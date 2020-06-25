@@ -27,14 +27,17 @@ con.connect(function(err) {
     console.log('Connected!');
 });
 
-app.post('/addPerson', function (req, res) {
-  var postData = req.body;
-  con.query('INSERT INTO person SET ?', postData,
-  function (error, results, fields) {
-  if (error) throw error;
-  res.send(results);
+app.get('/client/login/:id', function (req, res) {
+  req.params.id;
+  if (!req.params.id) {
+   return res.status(400).send({ error: true, message: 'Please provide user_name' });
+  }
+  con.query('SELECT email,mdp FROM client where email=?', req.params.id, function (error, results, fields) {
+   if (error) throw error;
+   res.send(results);
   });
 });
+
 
 app.get('/user/:nom', function (req, res) {
   req.params.nom;
@@ -67,6 +70,45 @@ app.get('/jeu', function (req, res) {
 
 app.get('/jeu/img', function (req, res) {
   con.query('SELECT img_jeu FROM jeu',
+  function (error, results, fields) {
+  if (error) throw error;
+  res.send(results);
+  });
+});
+
+app.get('/jeu/:id', function (req, res) {
+  req.params.id;
+  if (!req.params.id) {
+   return res.status(400).send({ error: true, message: 'Please provide user_name' });
+  }
+  con.query('SELECT * FROM jeu where id_jeu=?', req.params.id, function (error, results, fields) {
+   if (error) throw error;
+   res.send(results);
+  });
+});
+
+
+app.get('/commentaire/:nom', function (req, res) {
+  req.params.nom;
+  if (!req.params.nom) {
+   return res.status(400).send({ error: true, message: 'Please provide user_name' });
+  }
+  con.query('SELECT commentaire.texte_commentaire AS com, commentaire.date_commentaire AS date, client.prenom As prenom FROM commentaire LEFT JOIN client ON client.id_client = commentaire.id_client WHERE id_jeu=?', req.params.nom, function (error, results, fields) {
+   if (error) throw error;
+   res.send(results);
+  });
+});
+
+app.get('/commentaire', function (req, res) {
+  con.query('SELECT * FROM jeu',
+  function (error, results, fields) {
+  if (error) throw error;
+  res.send(results);
+  });
+});
+app.post('/addpersonne', function (req, res) {
+  var postData = req.body;
+  con.query('INSERT INTO client SET ?', postData,
   function (error, results, fields) {
   if (error) throw error;
   res.send(results);

@@ -16,7 +16,7 @@
         <li class="select2"><a class="fonction" routerLink="/creer">Créer un Compte</a></li>
       </ul>
     </div>
-    <form id="contenu" (submit)="loginuser($event)">
+    <form id="contenu" (submit)="selog(email.value)">
       <div id="titre" >
         Login
       </div>
@@ -31,7 +31,7 @@
       <div class="example-container">
         <mat-form-field class="entree" appearance="fill">
           <mat-label style="color: black;">Enter your password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'" id="mdp">
+          <input matInput [type]="hide ? 'password' : 'text'" id="mdp" (change)="change($event)" >
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
@@ -40,6 +40,23 @@
       <div>
         <input type="submit" class="button"  style="vertical-align:middle" value="Valider">
       </div>
+      <div *ngIf="login.length==0">
+
+        Les champs sont invalides ou non complet
+      </div>
+      <div *ngFor="let l of login">
+        <div *ngIf="connect==true ">
+          Connexion réussie
+          <div> <button style="border-radius: 5px; border: solid 1px rgb(26, 60, 124); font-size: large; color: rgb(26, 60, 124); margin-top: 10px;" routerLink="">Continuer</button></div>
+        </div>
+        <div *ngIf="connect==false">
+          Les champs sont invalides ou non complet
+          {{l.email}}{{l.mdp}}
+        </div>
+
+
+      </div>
+
     </form>
     <div>
       <a><img id="catalogue" src="games.jpg" alt="image de catalogue"></a>

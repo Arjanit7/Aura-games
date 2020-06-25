@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <ul id="menu2">
+      <li class="select2"><a class="fonction" routerLink="">IT</a></li>
+      <li class="select2"><a class="fonction" routerLink="">DE |</a></li>
+      <li class="select2"><a class="fonction" routerLink="">FR |</a></li>
+      <li class="select2"><a class="fonction" id="enre" routerLink="/login">S'enregistrer</a></li>
+      <li class="select2"><a class="fonction" routerLink="/creer">Créer un Compte</a></li>
+    </ul>
+  </div>
+
+  <div class="contenu">
+    <div class="description">
+      <table class="table">
+
+        <tr>
+
+        <td>
+          <img class="image" src={{lejeu[0].image}} alt={{lejeu[0].nom_jeu}}>
+        </td>
+
+        <td class="txt">
+
+         <h1 class="titrej"> {{lejeu[0].nom_jeu}}</h1>
+         <hr>
+
+         <p><span>Déscription : </span>{{lejeu[0].description}}</p>
+         <br>
+         <p><span>Ce jeu est disponible sur :</span> {{lejeu[0].plateforme}}</p>
+         <br>
+         <p><span>La limite d'âge est de : </span>{{lejeu[0].limite_age}} ans</p>
+         <br>
+         <p><span>Date de sortie : </span>{{lejeu[0].date_de_sortie}}</p>
+         <br>
+         <p><span>Taile du jeu : </span>{{lejeu[0].espace_disque_dur}}</p>
+         <br>
+        </td>
+        <td>
+          <h1 class ="commentaire">Commentaires</h1>
+          <div class ="commentaire">Entrée votre prénom <input  type="text" name="prenom" ></div>
+          <br>
+          <textarea class ="commentaire" rows="4" cols="50"></textarea>
+          <div class="lecom" *ngFor='let com of coms'>
+            <h3 class ="commentaire" style="font-weight: bold;">{{com.prenom}}</h3>
+            <h4 class ="commentaire">{{com.com}}</h4>
+            <p class ="commentaire" style="text-align: right; font-weight: lighter;">{{com.date}}</p>
+          </div>
+
+        </td>
+
+        </tr>
+
+        </table>
+    </div>
+
+  </div>
+
+</body>
+</html>

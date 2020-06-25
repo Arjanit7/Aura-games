@@ -10,4 +10,5 @@ export class Catalogue{
   quantité_stock:number;
   espace_disque_dur: string;
 
+
 }

@@ -7,12 +7,13 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
-
+import {DatePipe} from '@angular/common';
 
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,8 @@ import { AdminComponent } from './admin/admin.component';
 import { LogoutComponent } from './utilisateur/logout/logout.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { ToastrModule } from 'ngx-toastr';
+import{ detailComponent}from './catalogue/detail/detail.component'
+
 
 @NgModule({
   declarations: [
@@ -39,6 +42,7 @@ import { ToastrModule } from 'ngx-toastr';
     AdminComponent,
     LogoutComponent,
     UtilisateurComponent,
+    detailComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,8 +61,12 @@ import { ToastrModule } from 'ngx-toastr';
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
+
   ],
-  providers: [CatalogueService],
+  providers: [
+    CatalogueService,
+    DatePipe,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
